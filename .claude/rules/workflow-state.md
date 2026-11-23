@@ -1,0 +1,6 @@
+﻿- Update context/workflow-context.json when starting, pausing, completing, or aborting a stage.
+- Update .cache/sdlc/session-state.md and .cache/sdlc/workflow-history.md at stage transitions and human approval gates.
+- Save stage artifacts under docs/plans/SCRUM-7/ (requirements.md, architecture.md, design-review.md, impl-plan.md, code-review.md, verification.md).
+- Generate the final HTML audit report under docs/ (e.g., docs/workflow-report-WF-2026-001.html) during Stage 8.
+- Pause for explicit human approval after Requirements Analysis, Implementation Planning, and Final PR Review.
+- Never hardcode secrets or tokens in source files, docs, or .mcp.json.
