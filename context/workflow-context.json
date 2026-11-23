@@ -2,34 +2,37 @@
   "workflow_id": "sdlc-SCRUM-7-20261123",
   "jira_story": "SCRUM-7",
   "jira_url": "https://ruchikajoshi88.atlassian.net/browse/SCRUM-7",
-  "current_stage": "development",
-  "status": "in_progress",
+  "current_stage": "github_pull_request_and_audit",
+  "status": "paused_awaiting_final_pr_approval",
+  "branch": "feature/SCRUM-7-task-management-api",
   "stages": {
-    "requirements_analysis": {
-      "agent": "business-analyst",
-      "status": "completed",
-      "artifact": "docs/plans/SCRUM-7/requirements.md"
-    },
-    "architecture_design": {
-      "agent": "solution-architect",
-      "status": "completed",
-      "artifact": "docs/plans/SCRUM-7/architecture.md"
-    },
-    "design_review": {
-      "agent": "solution-engineer",
-      "status": "completed",
-      "verdict": "approved_with_changes_applied",
-      "artifact": "docs/plans/SCRUM-7/design-review.md"
-    },
-    "implementation_planning": {
-      "agent": "branch-git-planner",
-      "status": "completed",
-      "artifact": "docs/plans/SCRUM-7/impl-plan.md",
-      "planned_branch": "feature/SCRUM-7-task-management-api"
-    },
+    "requirements_analysis": {"agent": "business-analyst", "status": "completed", "artifact": "docs/plans/SCRUM-7/requirements.md"},
+    "architecture_design": {"agent": "solution-architect", "status": "completed", "artifact": "docs/plans/SCRUM-7/architecture.md"},
+    "design_review": {"agent": "solution-engineer", "status": "completed", "verdict": "approved_with_changes_applied", "artifact": "docs/plans/SCRUM-7/design-review.md"},
+    "implementation_planning": {"agent": "branch-git-planner", "status": "completed", "artifact": "docs/plans/SCRUM-7/impl-plan.md"},
     "development": {
       "agent": "developer",
-      "status": "in_progress"
+      "status": "completed",
+      "note": "6 task commits plus fix commit on feature branch; base commit on main"
+    },
+    "code_review": {
+      "agent": "code-reviewer",
+      "status": "completed",
+      "verdict": "approved_with_changes_fixed",
+      "artifact": "docs/plans/SCRUM-7/code-review.md",
+      "note": "CR-1 fixed in 6557a67 with 9 tests"
+    },
+    "verification": {
+      "agent": "automation-tester",
+      "status": "completed",
+      "result": "53 passed, 0 failed, 1 warning (real pytest execution) + live uvicorn smoke test",
+      "artifact": "docs/plans/SCRUM-7/verification.md"
+    },
+    "github_pull_request_and_audit": {
+      "agents": ["deploy-build-engineer", "chronicle-auditor"],
+      "status": "awaiting_final_approval",
+      "audit_report": "docs/workflow-report-WF-2026-001.html",
+      "pull_request": "not created: no remote configured, no owner/repo provided, final approval not given"
     }
   },
   "human_approvals": {
@@ -39,14 +42,15 @@
   },
   "approved_defaults": "Q-1..Q-10 defaults in requirements.md approved as proposed",
   "user_decisions": {
-    "git_init_in_project_folder": "approved with plan",
-    "token_in_env_example": "blank it out; user rotation not yet confirmed",
-    "docs_codemie": "add to .gitignore",
+    "git_init_in_project_folder": "done",
+    "token_in_env_example": "blanked in repo; user rotation not yet confirmed",
+    "docs_codemie": "added to .gitignore",
     "branch_and_commit_structure": "as planned",
-    "github_owner_repo": "NOT YET PROVIDED - required before push/PR at Stage 8"
+    "github_owner_repo": "NOT YET PROVIDED - required before push/PR creation"
   },
   "open_issues": [
-    "R-1: GitHub token was present in .env.example; being blanked in Stage 5; user must still revoke/rotate it",
-    "GitHub owner/repo not yet provided"
+    "R-1: token was present in .env.example; blanked before first commit; user must still revoke/rotate it",
+    "GitHub owner/repo not yet provided; no remote configured",
+    "CR-5: .env.example Jira var names differ from .mcp.json (pre-existing, informational)"
   ]
 }

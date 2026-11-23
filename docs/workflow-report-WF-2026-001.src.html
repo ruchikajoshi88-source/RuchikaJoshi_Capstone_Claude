@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCRUM-7 workflow audit: 7 of 8 stages done, 53 tests passed, PR waiting on approval</title>
+  <style>/* __CODEMIE_CSS__ */</style>
+</head>
+<body class="p-6">
+  <div class="container">
+
+    <header class="page-header">
+      <div>
+        <h1>SCRUM-7 workflow audit: 7 of 8 stages done, 53 tests passed, pull request waiting on your approval</h1>
+        <p class="page-subtitle">Workflow WF-2026-001 (sdlc-SCRUM-7-20261123) · 23 November 2026 · Jira story SCRUM-7, Task Management REST API · generated at Stage 8 from the run's own records</p>
+      </div>
+    </header>
+
+    <div class="alert alert-warning">Nothing has been pushed. No GitHub remote is configured and no owner/repo was given, so the pull request does not exist yet. It is created only after the final approval below.</div>
+
+    <div class="stat-grid mt-4">
+      <div class="stat-card">
+        <span class="stat-card-label">Stages complete</span>
+        <span class="stat-card-value">7 of 8</span>
+        <span class="stat-card-desc">Stage 8 is open: report written, push and PR pending approval</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card-label">Tests passed</span>
+        <span class="stat-card-value">53</span>
+        <span class="stat-card-desc">0 failed, 0 errors, 1 deprecation warning; same result on two separate runs</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card-label">Defects fixed in review</span>
+        <span class="stat-card-value">1</span>
+        <span class="stat-card-desc">CR-1: task IDs of 2^63 or more returned 500 instead of 404</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card-label">Human approvals</span>
+        <span class="stat-card-value">2 of 3</span>
+        <span class="stat-card-desc">Requirements and implementation plan given; final PR pending</span>
+      </div>
+    </div>
+
+    <h2 class="mt-8 mb-3">What was done, stage by stage</h2>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Each stage left one file in docs/plans/SCRUM-7/</div>
+        <div class="card-description">Stage 5 produced code and tests instead of a document</div>
+      </div>
+      <div class="card-body">
+        <div class="table-wrapper"><table class="table">
+          <thead><tr><th>#</th><th>Stage</th><th>Agent</th><th>Artifact</th><th>Outcome</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Requirements Analysis</td><td>business-analyst</td><td><code>requirements.md</code></td><td>8 functional requirements, 6 acceptance criteria, 10 questions with defaults, 5 risks</td><td><span class="badge badge-success"><span class="badge-dot"></span>Completed</span></td></tr>
+            <tr><td>2</td><td>Architecture Design</td><td>solution-architect</td><td><code>architecture.md</code></td><td>Router, CRUD and model layers; synchronous SQLAlchemy; in-memory test database; 7 decision records</td><td><span class="badge badge-success"><span class="badge-dot"></span>Completed</span></td></tr>
+            <tr><td>3</td><td>Design Review</td><td>solution-engineer</td><td><code>design-review.md</code></td><td>Approved with 3 changes (D-1 to D-3), all applied to the architecture</td><td><span class="badge badge-success"><span class="badge-dot"></span>Completed</span></td></tr>
+            <tr><td>4</td><td>Implementation Planning</td><td>branch-git-planner</td><td><code>impl-plan.md</code></td><td>6 tasks, git plan, about 35 planned tests (43 written first, 53 now)</td><td><span class="badge badge-success"><span class="badge-dot"></span>Completed</span></td></tr>
+            <tr><td>5</td><td>Development</td><td>developer</td><td><code>src/</code>, <code>tests/</code>, README</td><td>6 task commits on the feature branch</td><td><span class="badge badge-success"><span class="badge-dot"></span>Completed</span></td></tr>
+            <tr><td>6</td><td>Code Review</td><td>code-reviewer</td><td><code>code-review.md</code></td><td>Approved with changes; CR-1 fixed with 9 tests</td><td><span class="badge badge-success"><span class="badge-dot"></span>Completed</span></td></tr>
+            <tr><td>7</td><td>Verification</td><td>automation-tester</td><td><code>verification.md</code></td><td>53 passed; live server run of all five endpoints</td><td><span class="badge badge-success"><span class="badge-dot"></span>Completed</span></td></tr>
+            <tr><td>8</td><td>Pull Request and Audit</td><td>deploy-build-engineer, chronicle-auditor</td><td>This report</td><td>Report written; push and PR wait for approval</td><td><span class="badge badge-in-progress"><span class="badge-dot"></span>In progress</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <h2 class="mt-8 mb-3">Approval gates</h2>
+    <div class="card">
+      <div class="card-body">
+        <div class="table-wrapper"><table class="table">
+          <thead><tr><th>Gate</th><th>What was approved</th><th>Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Requirements Analysis</td><td>Requirements and the proposed defaults for questions Q-1 to Q-10</td><td>23 Nov 2026</td><td><span class="badge badge-success"><span class="badge-dot"></span>Approved</span></td></tr>
+            <tr><td>Implementation Planning</td><td>The plan, plus two instructions: blank the token in <code>.env.example</code>, and add <code>docs/codemie/</code> to <code>.gitignore</code></td><td>23 Nov 2026</td><td><span class="badge badge-success"><span class="badge-dot"></span>Approved</span></td></tr>
+            <tr><td>Final PR Review</td><td>Pushing the branch and opening the pull request</td><td>Not given</td><td><span class="badge badge-pending"><span class="badge-dot"></span>Pending</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <h2 class="mt-8 mb-3">Test results</h2>
+    <div class="grid grid-2 gap-4">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">29 of the 53 tests cover validation and error handling</div>
+          <div class="card-description">Counts from the verbose pytest run at commit 6557a67</div>
+        </div>
+        <div class="card-body">
+          <div class="table-wrapper"><table class="table">
+            <thead><tr><th>Module</th><th class="td-number">Passed</th></tr></thead>
+            <tbody>
+              <tr><td><code>test_tasks_create.py</code></td><td class="td-number">8</td></tr>
+              <tr><td><code>test_tasks_read.py</code></td><td class="td-number">4</td></tr>
+              <tr><td><code>test_tasks_update.py</code></td><td class="td-number">7</td></tr>
+              <tr><td><code>test_tasks_delete.py</code></td><td class="td-number">5</td></tr>
+              <tr><td><code>test_tasks_validation.py</code></td><td class="td-number">29</td></tr>
+              <tr><td>Total</td><td class="td-number">53</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Every Jira acceptance criterion has a passing test</div>
+          <div class="card-description">Test names are listed in verification.md</div>
+        </div>
+        <div class="card-body">
+          <div class="table-wrapper"><table class="table">
+            <thead><tr><th>Criterion</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>AC-1 Create returns 201 with generated id</td><td><span class="badge badge-success"><span class="badge-dot"></span>Pass</span></td></tr>
+              <tr><td>AC-2 List returns 200 with an array</td><td><span class="badge badge-success"><span class="badge-dot"></span>Pass</span></td></tr>
+              <tr><td>AC-3 Get returns 200, or 404 with the exact message</td><td><span class="badge badge-success"><span class="badge-dot"></span>Pass</span></td></tr>
+              <tr><td>AC-4 Partial update, 200 or 404</td><td><span class="badge badge-success"><span class="badge-dot"></span>Pass</span></td></tr>
+              <tr><td>AC-5 Delete returns 204, or 404</td><td><span class="badge badge-success"><span class="badge-dot"></span>Pass</span></td></tr>
+              <tr><td>AC-6 Tests pass via pytest</td><td><span class="badge badge-success"><span class="badge-dot"></span>Pass</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header">
+        <div class="card-title">A live server run covered the startup path that pytest skips</div>
+        <div class="card-description">uvicorn on port 8765 with the real on-disk database; the database file was deleted afterwards</div>
+      </div>
+      <div class="card-body">
+        <dl class="dl-grid">
+          <dt>Create</dt><dd>201 twice; ids 1 and 2; status defaults to <code>todo</code></dd>
+          <dt>Read</dt><dd>List 200 with 2 tasks; get by id 200</dd>
+          <dt>Update</dt><dd>PATCH status to <code>done</code> returned 200 with the other fields unchanged</dd>
+          <dt>Delete</dt><dd>204 with an empty body; the next get returned 404 with "Task with ID 2 does not exist"</dd>
+          <dt>Errors</dt><dd>Empty title returned 422; id 99999999999999999999 returned 404 (500 before the CR-1 fix)</dd>
+          <dt>Id reuse</dt><dd>The task created after deleting id 2 got id 3</dd>
+        </dl>
+      </div>
+    </div>
+
+    <h2 class="mt-8 mb-3">Findings</h2>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">One defect reached code review, and it was fixed with tests</div>
+        <div class="card-description">The author and a separate fresh-context agent both found CR-1; with the fix reverted, exactly 9 tests fail</div>
+      </div>
+      <div class="card-body">
+        <div class="table-wrapper"><table class="table">
+          <thead><tr><th>ID</th><th>Where found</th><th>Finding</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>D-1</td><td>Design review</td><td>SQLite would reuse the id of a deleted newest task; set <code>sqlite_autoincrement</code></td><td><span class="badge badge-success"><span class="badge-dot"></span>Fixed</span></td></tr>
+            <tr><td>D-2</td><td>Design review</td><td>Optional database-URL environment variable was not needed; removed</td><td><span class="badge badge-success"><span class="badge-dot"></span>Fixed</span></td></tr>
+            <tr><td>D-3</td><td>Design review</td><td>Plain <code>pytest</code> could not import <code>src</code> without the root conftest; added <code>pytest.ini</code></td><td><span class="badge badge-success"><span class="badge-dot"></span>Fixed</span></td></tr>
+            <tr><td>CR-1</td><td>Code review</td><td>Task id of 2^63 or more raised OverflowError and returned 500; now 404 per FR-008</td><td><span class="badge badge-success"><span class="badge-dot"></span>Fixed</span></td></tr>
+            <tr><td>CR-2, CR-3</td><td>Code review</td><td>No CHECK constraint on status, no description length cap, NUL accepted in titles, unknown fields ignored; outside the story</td><td><span class="badge badge-not-started"><span class="badge-dot"></span>Accepted</span></td></tr>
+            <tr><td>CR-5</td><td>Code review</td><td><code>.env.example</code> names the Jira variables <code>CAPSTONE_JIRA_*</code>, but <code>.mcp.json</code> reads <code>JIRA_USERNAME</code> and <code>JIRA_API_TOKEN</code>; existed before this work</td><td><span class="badge badge-warning"><span class="badge-dot"></span>Open</span></td></tr>
+            <tr><td>R-1</td><td>Requirements</td><td>A GitHub token was in <code>.env.example</code>. It was blanked before the first commit and never entered git history. It has not been confirmed as revoked.</td><td><span class="badge badge-warning"><span class="badge-dot"></span>Open: you must revoke it</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <h2 class="mt-8 mb-3">Pull request status</h2>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">The branch has 7 implementation commits on top of main, plus one for the stage 6 to 8 documents, and is ready to push once a repository is named</div>
+        <div class="card-description">Base commit e6939f0 on main holds the scaffolding and the stage 1 to 4 documents</div>
+      </div>
+      <div class="card-body">
+        <dl class="dl-grid">
+          <dt>Branch</dt><dd><code>feature/SCRUM-7-task-management-api</code></dd>
+          <dt>Base</dt><dd><code>main</code></dd>
+          <dt>Remote</dt><dd>None configured; owner and repository name not provided</dd>
+          <dt>PR description</dt><dd>Follows <code>.github/PULL_REQUEST_TEMPLATE.md</code>; links this report and verification.md</dd>
+          <dt>Jira</dt><dd><code>https://ruchikajoshi88.atlassian.net/browse/SCRUM-7</code></dd>
+        </dl>
+        <div class="table-wrapper mt-4"><table class="table">
+          <thead><tr><th>Commit</th><th>Subject</th></tr></thead>
+          <tbody>
+            <tr><td><code>d3f55cb</code></td><td>SCRUM-7: add package layout and pytest config</td></tr>
+            <tr><td><code>e558f89</code></td><td>SCRUM-7: add database setup and Task model</td></tr>
+            <tr><td><code>e7336c5</code></td><td>SCRUM-7: add Pydantic schemas</td></tr>
+            <tr><td><code>186b291</code></td><td>SCRUM-7: add task CRUD endpoints</td></tr>
+            <tr><td><code>ea0db05</code></td><td>SCRUM-7: add pytest suite for task API</td></tr>
+            <tr><td><code>cc7c19c</code></td><td>SCRUM-7: update README</td></tr>
+            <tr><td><code>6557a67</code></td><td>SCRUM-7: return 404 for task IDs outside SQLite integer range</td></tr>
+            <tr><td>next commit</td><td>SCRUM-7: add code review, verification and audit report (code-review.md, verification.md, this report, workflow-context.json)</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <h2 class="mt-8 mb-3">Not in this data</h2>
+    <div class="card">
+      <div class="card-body">
+        <ul>
+          <li>Code coverage: no coverage tool was run, so there is no percentage.</li>
+          <li>Linting and type checking: none is configured in the project, so none was run.</li>
+          <li>Platforms: tests ran on Windows 11 with Python 3.13 only. No load or concurrency testing.</li>
+          <li>Review independence: the author wrote the code and did the first review pass. The second pass was a separate agent from the same model family, so human review at the PR gate still matters.</li>
+          <li>Test strength: only the CR-1 tests were checked by reverting the fix. The other 44 tests were not individually mutation-tested.</li>
+          <li>Token revocation: this workflow cannot revoke a GitHub token and has no way to see whether you did.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mt-8 mb-3">Decision needed from you</h2>
+    <div class="card">
+      <div class="card-body">
+        <ol>
+          <li>Give the GitHub owner/repository for the push, and say whether it exists or should be created (private is the safer default).</li>
+          <li>Approve pushing <code>feature/SCRUM-7-task-management-api</code> and opening the pull request against <code>main</code>.</li>
+          <li>Revoke the GitHub token that was in <code>.env.example</code> before this repository goes anywhere shared.</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
