@@ -61,3 +61,28 @@ def test_non_integer_task_id_returns_422(client, method, kwargs):
     response = getattr(client, method)("/tasks/abc", **kwargs)
 
     assert response.status_code == 422
+
+
+@pytest.mark.parametrize("task_id", [2**63, -(2**63) - 1, 10**30])
+@pytest.mark.parametrize(
+    ("method", "kwargs"),
+    [
+        pytest.param("get", {}, id="get"),
+        pytest.param("patch", {"json": {"title": "x"}}, id="patch"),
+        pytest.param("delete", {}, id="delete"),
+    ],
+)
+def test_task_id_beyond_sqlite_integer_range_returns_404_not_500(client, method, kwargs, task_id):
+    response = getattr(client, method)(f"/tasks/{task_id}", **kwargs)
+
+    assert response.status_code == 404
+    assert response.json() == {"detail": f"Task with ID {task_id} does not exist"}
+
+
+def test_patch_accepts_title_of_exactly_255_chars(client, make_task):
+    task = make_task()
+
+    response = client.patch(f"/tasks/{task['id']}", json={"title": "x" * 255})
+
+    assert response.status_code == 200
+    assert len(response.json()["title"]) == 255

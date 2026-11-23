@@ -9,7 +9,14 @@ def list_tasks(db: Session) -> list[Task]:
     return list(db.scalars(select(Task).order_by(Task.id)))
 
 
+SQLITE_INT_MIN = -(2**63)
+SQLITE_INT_MAX = 2**63 - 1
+
+
 def get_task(db: Session, task_id: int) -> Task | None:
+    # SQLite cannot bind integers outside 64 bits (OverflowError -> 500); no such row can exist.
+    if not SQLITE_INT_MIN <= task_id <= SQLITE_INT_MAX:
+        return None
     return db.get(Task, task_id)
 
 
